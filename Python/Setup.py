@@ -1,7 +1,7 @@
 import numpy      as np
 import skimage.io as io
 
-from dglynn.HogsFromFolder      import HogsFromFolder
+from dglynn.HogsFromFolder     import HogsFromFolder
 from dglynn.HorseFeatureVector import HorseFeatureVector
 
 '''
@@ -11,14 +11,14 @@ from dglynn.HorseFeatureVector import HorseFeatureVector
 '''
 
 print('Extracting hog descriptors...')
-pos_X = HogsFromFolder.extract('images/positive_images_filtered')
+pos_X = HogsFromFolder.extract('images/horses/new/all_high')
 neg_X = HogsFromFolder.extract('images/negative_images_x2')
 
 print(pos_X.shape, neg_X.shape)
 
 print('Creating feature vectors...')
-X, y  = HorseFeatureVector.create(pos_X, neg_X)
+X, y = HorseFeatureVector.create(pos_X, neg_X)
 
 print('Saving to file...')
-HorseFeatureVector.save('datasets/data_filtered.h5', X, y)
+HorseFeatureVector.save('datasets/data_new.h5', X, y)
 print('Done!')

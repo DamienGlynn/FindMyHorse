@@ -7,7 +7,7 @@ from dglynn.Hog                import Hog
 from dglynn.HorseFeatureVector import HorseFeatureVector
 from dglynn.HorseClassifier    import HorseClassifier
 
-data_path = 'datasets/data_filtered.h5'
+data_path = 'datasets/data_new.h5'
 
 if __name__ == "__main__":
 	
